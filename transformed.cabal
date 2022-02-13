@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 629a44fff9705cbb4ab4a50a11d7a9bd13836f411a1edad3b1e6093d685f2345
+-- hash: 37631143d4d3c8d1a4b60c78f5f7d27887e930716b6482a0a468ba0617307335
 
 name:           transformed
 version:        0.1.0.0
@@ -32,8 +32,17 @@ library
       Paths_transformed
   hs-source-dirs:
       src
-  default-extensions: DerivingStrategies DerivingVia FlexibleInstances KindSignatures MultiParamTypeClasses NoImplicitPrelude Safe ScopedTypeVariables TypeApplications
-  ghc-options: -Werror -Weverything -Wno-missing-import-lists
+  default-extensions:
+      DerivingStrategies
+      DerivingVia
+      FlexibleInstances
+      KindSignatures
+      MultiParamTypeClasses
+      NoImplicitPrelude
+      Safe
+      ScopedTypeVariables
+      TypeApplications
+  ghc-options: -Wall
   build-depends:
       base >=4.7 && <5
     , monad-control
@@ -47,8 +56,17 @@ test-suite transformed-test
       Paths_transformed
   hs-source-dirs:
       test
-  default-extensions: DerivingStrategies DerivingVia FlexibleInstances KindSignatures MultiParamTypeClasses NoImplicitPrelude Safe ScopedTypeVariables TypeApplications
-  ghc-options: -Werror -Weverything -Wno-missing-import-lists -threaded -rtsopts -with-rtsopts=-N
+  default-extensions:
+      DerivingStrategies
+      DerivingVia
+      FlexibleInstances
+      KindSignatures
+      MultiParamTypeClasses
+      NoImplicitPrelude
+      Safe
+      ScopedTypeVariables
+      TypeApplications
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
     , monad-control

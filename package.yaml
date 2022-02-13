@@ -31,9 +31,7 @@ default-extensions:
   - TypeApplications
 
 ghc-options:
-  - -Werror
-  - -Weverything
-  - -Wno-missing-import-lists
+  - -Wall
 
 dependencies:
   - base >= 4.7 && < 5
