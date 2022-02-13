@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 37631143d4d3c8d1a4b60c78f5f7d27887e930716b6482a0a468ba0617307335
+-- hash: a6685337feac1794eb46dee3a89dab9932fcb26a21887581a72ce2e10fbdc31c
 
 name:           transformed
 version:        0.1.0.0
@@ -33,13 +33,10 @@ library
   hs-source-dirs:
       src
   default-extensions:
-      DerivingStrategies
       DerivingVia
       FlexibleInstances
       KindSignatures
       MultiParamTypeClasses
-      NoImplicitPrelude
-      Safe
       ScopedTypeVariables
       TypeApplications
   ghc-options: -Wall
@@ -53,17 +50,15 @@ test-suite transformed-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      Example
       Paths_transformed
   hs-source-dirs:
       test
   default-extensions:
-      DerivingStrategies
       DerivingVia
       FlexibleInstances
       KindSignatures
       MultiParamTypeClasses
-      NoImplicitPrelude
-      Safe
       ScopedTypeVariables
       TypeApplications
   ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N

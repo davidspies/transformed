@@ -20,13 +20,10 @@ extra-source-files:
 description: Please see the README on GitHub at <https://github.com/davidspies/transformed#readme>
 
 default-extensions:
-  - DerivingStrategies
   - DerivingVia
   - FlexibleInstances
   - KindSignatures
   - MultiParamTypeClasses
-  - NoImplicitPrelude
-  - Safe
   - ScopedTypeVariables
   - TypeApplications
 
