@@ -16,8 +16,7 @@ import Data.Kind (Type)
 import Prelude
 
 newtype Transformed t (m :: Type -> Type) a = Transformed {runTransformed :: t m a}
-  deriving (Functor, Applicative, Monad) via t m
-  deriving (MonadTrans, MonadTransControl) via t
+  deriving (Functor, Applicative, Monad, MonadTrans, MonadTransControl)
 
 class MonadTransControl t => PassesWriter t where
   fOut :: Monoid w => (StT t a, w) -> StT t (a, w)

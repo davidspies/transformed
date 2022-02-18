@@ -15,29 +15,25 @@ main :: IO ()
 main = putStrLn "Runtime test suite not yet implemented"
 
 newtype MyReaderT r m a = MyReaderT (ReaderT r m a)
-  deriving (Functor, Applicative, Monad) via (ReaderT r m)
-  deriving (MonadTrans, MonadTransControl, PassesWriter) via (ReaderT r)
+  deriving (Functor, Applicative, Monad, MonadTrans, MonadTransControl, PassesWriter)
   deriving
     (MonadReader r', MonadWriter w', MonadState s', MonadError e')
     via Transformed (MyReaderT r) m
 
 newtype MyWriterT w m a = MyWriterT (WriterT w m a)
-  deriving (Functor, Applicative, Monad) via (WriterT w m)
-  deriving (MonadTrans, MonadTransControl, PassesWriter) via (WriterT w)
+  deriving (Functor, Applicative, Monad, MonadTrans, MonadTransControl, PassesWriter)
   deriving
     (MonadReader r', MonadWriter w', MonadState s', MonadError e')
     via Transformed (MyWriterT w) m
 
 newtype MyStateT s m a = MyStateT (StateT s m a)
-  deriving (Functor, Applicative, Monad) via (StateT s m)
-  deriving (MonadTrans, MonadTransControl, PassesWriter) via (StateT s)
+  deriving (Functor, Applicative, Monad, MonadTrans, MonadTransControl, PassesWriter)
   deriving
     (MonadReader r', MonadWriter w', MonadState s', MonadError e')
     via Transformed (MyStateT s) m
 
 newtype MyExceptT e m a = MyExceptT (ExceptT e m a)
-  deriving (Functor, Applicative, Monad) via (ExceptT e m)
-  deriving (MonadTrans, MonadTransControl, PassesWriter) via (ExceptT e)
+  deriving (Functor, Applicative, Monad, MonadTrans, MonadTransControl, PassesWriter)
   deriving
     (MonadReader r', MonadWriter w', MonadState s', MonadError e')
     via Transformed (MyExceptT e) m

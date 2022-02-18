@@ -22,6 +22,7 @@ description: Please see the README on GitHub at <https://github.com/davidspies/t
 default-extensions:
   - DerivingVia
   - FlexibleInstances
+  - GeneralizedNewtypeDeriving
   - KindSignatures
   - MultiParamTypeClasses
   - ScopedTypeVariables

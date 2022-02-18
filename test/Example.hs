@@ -10,7 +10,7 @@ import Control.Monad.State (MonadState, StateT (..))
 import Control.Monad.Trans (MonadTrans (..))
 import Control.Monad.Trans.Control (MonadTransControl (..))
 import Control.Monad.Transformed (PassesWriter (..), Transformed (..))
-import Control.Monad.Writer.Lazy (MonadWriter)
+import Control.Monad.Writer (MonadWriter)
 import Data.Bifunctor (first)
 
 newtype MyTransformer m a = MyTransformer {getMyTransformer :: ExceptT Int (StateT Bool m) a}
